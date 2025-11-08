@@ -1,25 +1,13 @@
 const filterVipUsers = (users, vipUserIdsSet) => {
-  const vipUserObjects = [];
-
-  for (let i = 0; i < users.length; i++) {
-    const user = users[i];
-    if (vipUserIdsSet.has(user.id)) {
-      vipUserObjects.push(user);
-    }
-  }
-
-  return vipUserObjects;
+  return users.filter(user => vipUserIdsSet.has(user.id))
 };
 
 const multiplicativeAverage = (nums) => {
-  let product = 1;
+  const product = nums.reduce((accumulator, currentNum) => {
+    return accumulator * currentNum
+  }, 1)
+  return product / nums.length
 
-  for (let i = 0; i < nums.length; i++) {
-    const num = nums[i];
-    product *= num;
-  }
-
-  return product / nums.length;
 };
 
 module.exports = {
