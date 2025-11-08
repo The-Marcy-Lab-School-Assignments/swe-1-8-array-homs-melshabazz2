@@ -96,14 +96,37 @@ const sortNumbers = (numbers) => {
   return numbers.sort((a, b) => a - b)
 };
 
-const sortNumbersBetter = () => { };
+const sortNumbersBetter = (numbers, isDescending) => {
+  // const numbersCopy = numbers.slice()
+  // return numbers.sort((number) => {
+  const numbersCopy = [...numbers]
+  numbersCopy.sort((a, b) => {
+    if (isDescending) {
+      return b - a
 
-const sortUsersByOrder = (users) => {
-  const usersCopy = users.slice()
-  return usersCopy.sort((a, b))
+    }
+    return a - b
+  })
+  return numbersCopy
 };
 
-const sortUsersByName = () => { };
+const sortUsersByOrder = (users) => {
+  // const usersCopy = users.slice()
+  // return usersCopy.sort((a, b))
+  const newUsers = [...users]
+  newUsers.sort((a, b) => {
+    return a.order - b.order
+  })
+  return newUsers
+};
+
+const sortUsersByName = (users) => {
+  const newUsers = [...users]
+  newUsers.sort((a, b) => {
+    return a.name.localeCompare(b.name)
+  })
+  return newUsers
+};
 
 module.exports = {
   getUserById,

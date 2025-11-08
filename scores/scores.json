@@ -1,8 +1,8 @@
 {
   "testScores": {
     "Modify Tests": {
-      "MoTe1": 0,
-      "MoTe2": 0
+      "MoTe1": 1,
+      "MoTe2": 1
     },
     "From Scratch Tests": {
       "FrScTe1": 1,
@@ -21,9 +21,9 @@
       "FrScTe14": 1,
       "FrScTe15": 1,
       "FrScTe16": 1,
-      "FrScTe17": 0,
-      "FrScTe18": 0,
-      "FrScTe19": 0,
+      "FrScTe17": 1,
+      "FrScTe18": 1,
+      "FrScTe19": 1,
       "FrScTe20": 0
     }
   },
@@ -76,8 +76,8 @@
     "From Scratch Tests sortUsersByName - sorts a list of users by name": "FrScTe20"
   },
   "humanReadable": {
-    "Modify Tests": "0/2",
-    "finalTestScore": "FINAL SCORE: 15/22",
-    "From Scratch Tests": "15/20"
+    "Modify Tests": "2/2",
+    "finalTestScore": "FINAL SCORE: 20/22",
+    "From Scratch Tests": "18/20"
   }
 }
